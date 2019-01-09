@@ -21,8 +21,12 @@ function exactMatch(drivers, matcher) {
   })
 }
 
-function exactMatchToList(drivers, revenue) {
-  return drivers.filter(function(el) {
-    if (el.revenue===revenue);
+function exactMatchToList(drivers, matcher) {
+  return drivers.filter(function(driver) {
+    for (const key in matcher) {
+      if (driver[key]===matcher[key]) {
+        return true
+      }
+    }
   })
 }
