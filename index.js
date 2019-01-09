@@ -22,11 +22,7 @@ function exactMatch(drivers, matcher) {
 }
 
 function exactMatchToList(drivers, matcher) {
-  return drivers.filter(function(driver) {
-    for (const key in matcher) {
-      if (driver[key]===matcher[key]) {
-        return true
-      }
-    }
+  retrun exactMatch(drivers, matcher).map(function(driver) {
+    return driver.name
   })
 }
