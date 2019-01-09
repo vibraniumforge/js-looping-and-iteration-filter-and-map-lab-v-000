@@ -18,11 +18,11 @@ function exactMatch(drivers, matcher) {
         return true
       }
     }
-  })
+  });
 }
 
 function exactMatchToList(drivers, matcher) {
-  retrun exactMatch(drivers, matcher).map(function(driver) {
+  return exactMatch(drivers, matcher).map(function(driver) {
     return driver.name
-  })
+  });
 }
